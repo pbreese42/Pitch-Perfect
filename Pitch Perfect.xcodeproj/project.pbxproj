@@ -12,6 +12,7 @@
 		893364291C80B9DE00AC68B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 893364271C80B9DE00AC68B1 /* Main.storyboard */; };
 		8933642B1C80B9DE00AC68B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8933642A1C80B9DE00AC68B1 /* Assets.xcassets */; };
 		8933642E1C80B9DE00AC68B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8933642C1C80B9DE00AC68B1 /* LaunchScreen.storyboard */; };
+		893364361C80F3FD00AC68B1 /* PlaySoundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893364351C80F3FD00AC68B1 /* PlaySoundsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		8933642A1C80B9DE00AC68B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8933642D1C80B9DE00AC68B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8933642F1C80B9DE00AC68B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		893364351C80F3FD00AC68B1 /* PlaySoundsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaySoundsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				893364231C80B9DE00AC68B1 /* AppDelegate.swift */,
 				893364251C80B9DE00AC68B1 /* ViewController.swift */,
 				893364271C80B9DE00AC68B1 /* Main.storyboard */,
+				893364351C80F3FD00AC68B1 /* PlaySoundsViewController.swift */,
 				8933642A1C80B9DE00AC68B1 /* Assets.xcassets */,
 				8933642C1C80B9DE00AC68B1 /* LaunchScreen.storyboard */,
 				8933642F1C80B9DE00AC68B1 /* Info.plist */,
@@ -136,6 +139,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				893364261C80B9DE00AC68B1 /* ViewController.swift in Sources */,
+				893364361C80F3FD00AC68B1 /* PlaySoundsViewController.swift in Sources */,
 				893364241C80B9DE00AC68B1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
