@@ -14,6 +14,8 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     @IBOutlet weak var recordingInProgress: UILabel!
     @IBOutlet weak var stopButton: UIButton!
     @IBOutlet weak var recordButton: UIButton!
+    @IBOutlet weak var pauseButton: UIButton!
+    @IBOutlet weak var resumeButton: UIButton!
     
     var audioRecorder: AVAudioRecorder!
     var recordedAudio: RecordedAudio!
@@ -25,6 +27,8 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     override func viewWillAppear(animated: Bool) {
         // Hide the stop button
         stopButton.hidden = true
+        resumeButton.hidden = true
+        pauseButton.hidden = true
         recordButton.enabled = true
         recordingInProgress.text = "Tap to Record"
     }
@@ -36,7 +40,8 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
 
     @IBAction func recordAudio(sender: UIButton) {
         stopButton.hidden = false
-        recordingInProgress.text = "recording in progress"
+        pauseButton.hidden = false
+        recordingInProgress.text = "Recording in Progress"
         recordButton.enabled = false
         
         // Setup recording file path
@@ -76,6 +81,20 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         audioRecorder.stop()
         let audioSession = AVAudioSession.sharedInstance()
         try! audioSession.setActive(false)
+    }
+    
+    @IBAction func pauseRecording(sender: UIButton) {
+        resumeButton.hidden = false
+        pauseButton.hidden = true
+        recordingInProgress.text = "Recording Paused"
+        audioRecorder.pause()
+    }
+    
+    @IBAction func resumeRecording(sender: UIButton) {
+        resumeButton.hidden = true
+        pauseButton.hidden = false
+        recordingInProgress.text = "Recording in Progress"
+        audioRecorder.record()
     }
 }
 
