@@ -20,13 +20,13 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
     
     override func viewWillAppear(animated: Bool) {
         // Hide the stop button
         stopButton.hidden = true
         recordButton.enabled = true
+        recordingInProgress.text = "Tap to Record"
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,7 +36,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
 
     @IBAction func recordAudio(sender: UIButton) {
         stopButton.hidden = false
-        recordingInProgress.hidden = false
+        recordingInProgress.text = "recording in progress"
         recordButton.enabled = false
         
         // Setup recording file path
@@ -72,8 +72,6 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     }
 
     @IBAction func stopRecording(sender: UIButton) {
-        recordingInProgress.hidden = true
-        
         //Stop recording the user's voice
         audioRecorder.stop()
         let audioSession = AVAudioSession.sharedInstance()
