@@ -3,13 +3,14 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Record-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Pitch_Perfect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="RecordSoundsViewController" customModule="Pitch_Perfect" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -36,7 +37,6 @@
                                 <state key="normal" image="Stop"/>
                                 <connections>
                                     <action selector="stopRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GAQ-wQ-FPz"/>
-                                    <segue destination="ak1-gr-G6A" kind="show" id="Znb-n5-WTp"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -85,6 +85,7 @@
                         <outlet property="recordButton" destination="vXb-az-4m6" id="ZB3-a8-dKh"/>
                         <outlet property="recordingInProgress" destination="TY1-jy-Y8V" id="Liv-zH-iFI"/>
                         <outlet property="stopButton" destination="K3n-Ng-DnH" id="OuG-96-ps8"/>
+                        <segue destination="ak1-gr-G6A" kind="show" identifier="stopRecording" id="5bo-i9-O0G"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -141,12 +142,12 @@
                                 <exclude reference="j3H-ee-Ayc"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="YTX-Ul-nuY"/>
+                                <exclude reference="WeR-EG-37P"/>
                                 <exclude reference="Q2D-QT-RtF"/>
                                 <exclude reference="ybL-1h-Wt9"/>
                                 <exclude reference="JQz-TG-wOm"/>
                                 <exclude reference="vOl-kS-auw"/>
-                                <exclude reference="WeR-EG-37P"/>
-                                <exclude reference="YTX-Ul-nuY"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -156,12 +157,12 @@
                                 <include reference="j3H-ee-Ayc"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="YTX-Ul-nuY"/>
+                                <include reference="WeR-EG-37P"/>
                                 <include reference="Q2D-QT-RtF"/>
                                 <include reference="ybL-1h-Wt9"/>
                                 <include reference="JQz-TG-wOm"/>
                                 <include reference="vOl-kS-auw"/>
-                                <include reference="WeR-EG-37P"/>
-                                <include reference="YTX-Ul-nuY"/>
                             </mask>
                         </variation>
                     </view>
